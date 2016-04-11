@@ -9,8 +9,8 @@
     "dependencies":{
     	"websocket": ">=1.0.17",
     	"optimist": ">=0.6.1",
-    	"under_score": ">=0.1.0"
-
+    	"under_score": ">=0.1.0",
+      "log4js": ">=0.6.33"
     },
     "repository": {
     "type": "git",
