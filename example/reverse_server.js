@@ -1,7 +1,7 @@
 "use strict";
 
 //REQUIRE LIBRARY
-const wst = require("../lib/wst_server_reverse.js")
+const wst = require("../lib/wst"). server_reverse;
 
 //INSTANCE A NEW WEBSOCKET TUNNEL REVERSE SERVER OBJECT
 //IN THE NEW VERSION YOU NEED TO SPECIFY THE PORT AT DEFINITION

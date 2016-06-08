@@ -55,8 +55,8 @@ optimist = require('optimist').usage("\nRun websocket tunnel and reverse tunnel 
     if (argv.s){
       require("../lib/https_override");
       wst = require("../lib/wst");
-      server = new wst.server_reverse;
-      server.start(argv.s);
+      server = new wst.server_reverse(argv.s);
+      server.start();
     }
     else{
       require("../lib/https_override");
