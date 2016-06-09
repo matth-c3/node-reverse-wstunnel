@@ -21,13 +21,8 @@
     "reverse",
     "WebSocket"
   	],
-  	"author": "Andrea Rocco Lotronto <alotronto@unime.it>",
-  	"license": [
-  		{
-  			"type": "Apache-2.0",
-  			"url": "https://github.com/MDSLab/wstunnel/blob/master/LICENSE"
-  		}
-  	],
+  	"author": "Andrea Rocco Lotronto <andrealotronto@gmail.com>",
+  	"license":"Apache-2.0",
   	"bugs": {
     	"url": "https://github.com/MDSLab/wstunnel/issues"
   	},

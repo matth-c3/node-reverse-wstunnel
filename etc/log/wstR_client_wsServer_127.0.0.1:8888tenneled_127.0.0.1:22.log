@@ -1,3 +1,0 @@
-[2016-06-08 15:00:55.465] [INFO] main - wsClientForControll for  Controll connected
-[2016-06-08 15:03:12.158] [DEBUG] main - Message for new TCP Connectio on WS Server:[object Object]
-[2016-06-08 15:03:12.161] [DEBUG] main - Call WS-Server for connect id::"+parsing[1]

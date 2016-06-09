@@ -1,6 +1,0 @@
-[2016-06-08 14:59:45.699] [INFO] main - Server is listening on port 8888
-[2016-06-08 15:00:50.034] [INFO] main - Created TCP server on port: 8822
-[2016-06-08 15:00:50.040] [INFO] main - WS Connectio for Control Created
-[2016-06-08 15:03:12.243] [INFO] main - Request for Data WS Socket
-[2016-06-08 15:03:19.613] [INFO] main - WebSocket Controll Peer ::ffff:127.0.0.1 disconnected for:"Connection dropped by remote peer."
-[2016-06-08 15:03:19.614] [INFO] main - Close TCP server on port 8822
