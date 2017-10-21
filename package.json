@@ -14,7 +14,7 @@
     },
     "repository": {
     "type": "git",
-    "url": "git://github.com/MDSLab/wstunnel.git"
+    "url": "git://github.com/alotronto/wstunnel.git"
   	},
   	"keywords": [
     "tunnel",
@@ -25,11 +25,11 @@
   	"license": [
   		{
   			"type": "Apache-2.0",
-  			"url": "https://github.com/MDSLab/wstunnel/blob/master/LICENSE"
+  			"url": "https://github.com/alotronto/node-reverse-wstunnel/blob/master/LICENSE"
   		}
   	],
   	"bugs": {
-    	"url": "https://github.com/MDSLab/wstunnel/issues"
+    	"url": "https://github.com/alotronto/wstunnel/issues"
   	},
-  	"homepage": "https://github.com/MDSLab/wstunnel"
+  	"homepage": "https://github.com/alotronto/wstunnel"
 }
