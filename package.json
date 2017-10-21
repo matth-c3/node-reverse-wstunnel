@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/alotronto/wstunnel.git"
+    "url": "github.com/alotronto/node-reverse-wstunnel"
   },
   "keywords": [
     "tunnel",
