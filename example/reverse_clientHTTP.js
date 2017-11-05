@@ -1,7 +1,7 @@
-"use strict";
+#!/usr/bin/env node
 
-//REQUIRE LIBRARY
-const wst = require("../lib/wst").client_reverse;
+//Load Required library
+const wst = require("../lib/wst_wrapper").client_reverse;
 
 let client = new wst();
 

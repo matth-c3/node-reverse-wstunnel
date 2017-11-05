@@ -1,57 +1,72 @@
-#Tunnel and Reverse Tunnel Client & Server on WebSocket Implementation for node
+# Tunnel and Reverse Tunnel Client and Server implementation over WS/WSS protocol for Node.js
 [![npm version](https://badge.fury.io/js/node-reverse-wstunnel.svg)](http://badge.fury.io/js/node-reverse-wstunnel)
 
 [![NPM](https://nodei.co/npm/node-reverse-wstunnel.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/node-reverse-wstunnel/)
 
 [![NPM](https://nodei.co/npm-dl/node-reverse-wstunnel.png?months=1&height=3)](https://nodei.co/npm/node-reverse-wstunnel/)
 
-##Overview
+
+[comment]: <> (TODO: Change usage example for new version code)
+## Overview
 
 Tools to establish a TCP socket tunnel over websocket connection, and to enstabilish a reverse tunnel over websocket connection, for circumventing the problems of direct connections to the host behind a strict firewalls or without a public IP.
 
-##Installation
+## Installation
+```JavaScript
 npm install node-reverse-wstunnel
-
-##Usage in node
-
-###Server example
+```
+## Usage for a Node.js application
+### Instantiation of a tunnel server
 ```JavaScript   
-var wts = require("node-reverse-wstunnel");
+const wst = require("../lib/wst_wrapper").server;
 
-server = new wts.server(); 
-//the port of the websocket server 
+//Instance of a new WebSocker Tunnel Server Object specifying the TCP port on which it will be listening
+let server = new wst(8888);
+//Start the server
 server.start(port);
 ``` 
-###Client example
+### Implementation of a tunnel client
 ```JavaScript   
-var wts = require("node-reverse-wstunnel");
+const wst = require("../lib/wst_wrapper").client;
 
-client = new wts.client();
-//localport is the opened port of the localhost for the tunnel
-//remotehost:port is the service that will be tunneled
-client.start(localport,'ws://websocketserverhost:port', remotehost:port);
+let client = new wst();
+
+/*
+<publicPortOnServer> is the port on the public reverse tunnel server on which the service will be reachable
+<WSHost> is the remote host on which the reverse tunnel server is started  expressed in the following form 'ws://<hostname>:<port>'
+<remoteHost>:<remotePort> is the end point of the service for the defined tunnel
+*/
+client.start('<publicPortOnServer>', '<WSHost>', '<remoteHost>:<remotePort>');
+
 ```
 
-###Reverse Server example
+### Instantiation of a reverse tunnel server
 ```JavaScript   
-var wts = require("node-reverse-wstunnel");
+const wst = require("../lib/wst_wrapper").server_reverse;
 
-reverse_server = new wts.server_reverse(); 
-//the port of the websocket server 
-reverse_server.start(port);
+//Instance of a new WebSocker Reverse Tunnerl Server Object specifying the TCP port on which it will be listening
+let server = new wst(8888);
+//Start the server
+server.start(port);
 ``` 
-###Reverse Client example
+### Implementation of a reverse tunnel client
 ```JavaScript   
-var wts = require("node-reverse-wstunnel");
+const wst = require("../lib/wst_wrapper").client_reverse;
 
-reverse_client = new wts.client_reverse();
-//portTunnel is the port that will be opened on the websocket server 
-//remotehost:port is the service that will be reverse tunneled
-reverse_client.start(portTunnel, 'ws://websocketserverhost:port', remotehost:port);
+let client = new wst();
+
+/*
+<publicPortOnServer> is the port on the public reverse tunnel server on which the service will be reachable
+<WSHost> is the remote host on which the reverse tunnel server is started  expressed in the following form 'ws://<hostname>:<port>'
+<remoteHost>:<remotePort> is the end point of the service for the defined tunnel
+*/
+client.start('<publicPortOnServer>', '<WSHost>', '<remoteHost>:<remotePort>');
+
 ```
 
-###Usage of wstt.js executable
-Using the *wstt.js* executable located in *bin* directory:
+
+### Usage of wst.js executable
+Using the *wst.js* executable located in *bin* directory:
 
 For running a websocket tunnel server:  
 
@@ -83,63 +98,3 @@ For running a websocket reverse tunnel client:
     ./wstt.js -r 6666:2.2.2.2:33 ws://server:8080
 
 In the above example the client tells the server to open a TCP server on port 6666 and all connection on this port are tunneled to the client that is directely connected to 2.2.2.2:33
-
-## Use case
-
-For tunneling over strict firewalls: WebSocket is a part of the HTML5 standard, any reasonable firewall will unlikely
-be so strict as to break HTML5. 
-
-The tunnel server currently supports plain tcp socket only, for SSL support, use NGINX, shown below:
-
-On server:
-    ./wstt.js -s 8080
-
-On server, run nginx (>=1.3.13) with sample configuration:
-
-    server {
-        listen   443;
-        server_name  mydomain.com;
-
-        ssl  on;
-        ssl_certificate  /path/to/my.crt
-        ssl_certificate_key  /path/to/my.key
-        ssl_session_timeout  5m;
-        ssl_protocols  SSLv2 SSLv3 TLSv1;
-        ssl_ciphers  ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;
-        ssl_prefer_server_ciphers   on;
-
-        location / {
-            proxy_pass http://127.0.0.1:8080;
-            proxy_http_version 1.1;
-            proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection "upgrade";
-            proxy_set_header        Host            $host;
-            proxy_set_header        X-Real-IP       $remote_addr;
-            proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header        X-Forwarded-Proto $scheme;
-        }
-    }
-
-Then on client:
-
-    ./wstt.js -t 99:targethost:targetport wss://mydomain.com
-
-
-### OpenVPN use case
-
-Suppose on the server you have OpenVpn installed on the default port 1194,  then run wstunnel as such:
-
-    ./wstt.js -s 8888 -t 127.0.0.1:1194
-    
-Now on the server, you have a websocket server listening on 8888, any connection to 8888 will be forwarded to  
-127.0.0.1:1194, the OpenVpn port.
-
-Now on client, you run:
-
-    ./wstt.js -t 1194 ws://server:8888
-  
-Then launch the OpenVpn client, connect to localhost:1194 will be same as connect to server's 1194 port.
-
-Suppose the firewall allows http traffic on target port 80 only, then setup a NGINX reverse proxy to listen on port 80,
-and proxy http traffic to localhost:8888 via host name.
-

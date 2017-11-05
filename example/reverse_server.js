@@ -1,7 +1,7 @@
-"use strict";
+#!/usr/bin/env node 
 
-//REQUIRE LIBRARY
-const wst = require("../lib/wst"). server_reverse;
+//Load Required library
+const wst = require("../lib/wst_wrapper").server_reverse;
 
 //INSTANCE A NEW WEBSOCKET TUNNEL REVERSE SERVER OBJECT
 //IN THE NEW VERSION YOU NEED TO SPECIFY THE PORT AT DEFINITION
