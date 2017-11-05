@@ -6,7 +6,7 @@
 [![NPM](https://nodei.co/npm-dl/node-reverse-wstunnel.png?months=1&height=3)](https://nodei.co/npm/node-reverse-wstunnel/)
 
 
-[comment]: <> (TODO: Change usage example for new version code)
+
 ## Overview
 
 Tools to establish a TCP socket tunnel over websocket connection, and to enstabilish a reverse tunnel over websocket connection, for circumventing the problems of direct connections to the host behind a strict firewalls or without a public IP.
