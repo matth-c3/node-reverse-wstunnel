@@ -7,9 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "websocket": ">=1.0.17",
+    "debug": "^4.1.0",
     "optimist": ">=0.6.1",
-    "under_score": ">=0.1.0"
+    "under_score": ">=0.1.0",
+    "websocket": ">=1.0.17"
   },
   "repository": {
     "type": "git",
@@ -29,5 +30,11 @@
   "bugs": {
     "url": "https://github.com/alotronto/wstunnel/issues"
   },
-  "homepage": "https://github.com/alotronto/wstunnel"
+  "homepage": "https://github.com/alotronto/wstunnel",
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-import-resolver-node": "^0.3.2",
+    "eslint-plugin-import": "^2.14.0"
+  }
 }
