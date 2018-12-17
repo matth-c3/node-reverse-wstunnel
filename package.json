@@ -13,7 +13,6 @@
     "optimist": ">=0.6.1",
     "randomstring": "^1.1.5",
     "simple-encryptor": "^2.0.0",
-    "under_score": ">=0.1.0",
     "websocket": ">=1.0.17"
   },
   "repository": {

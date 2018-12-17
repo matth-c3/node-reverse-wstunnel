@@ -5,7 +5,6 @@ dependencies:
   optimist: 0.6.1
   randomstring: 1.1.5
   simple-encryptor: 2.0.0
-  under_score: 0.1.0
   websocket: 1.0.28
 devDependencies:
   eslint: 5.10.0
@@ -1296,18 +1295,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==
-  /under_score/0.1.0:
-    dependencies:
-      underscore: 1.9.1
-    dev: false
-    engines:
-      node: '>=0.4.0'
-    resolution:
-      integrity: sha1-J3V5ZDLVadwLtJo/ocnhbz47rrk=
-  /underscore/1.9.1:
-    dev: false
-    resolution:
-      integrity: sha512-5/4etnCkd9c8gwgowi5/om/mYO5ajCaOgdzj/oW+0eQV9WxKBDZw5+ycmKmeaTXjInS/W0BzpGLo2xR2aBwZdg==
   /uri-js/4.2.2:
     dependencies:
       punycode: 2.1.1
@@ -1386,5 +1373,4 @@ specifiers:
   optimist: '>=0.6.1'
   randomstring: ^1.1.5
   simple-encryptor: ^2.0.0
-  under_score: '>=0.1.0'
   websocket: '>=1.0.17'
