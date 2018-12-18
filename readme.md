@@ -1,4 +1,4 @@
-reverse-ws-tunnel
+reverse-websocket-tunnel
 ---
 
 ## Overview
