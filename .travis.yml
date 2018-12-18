@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - 8
+deploy:
+  provider: npm
+  email: michael34435@capslock.tw
+  api_key: $NPM_TOKEN
+  on:
+    tags: true

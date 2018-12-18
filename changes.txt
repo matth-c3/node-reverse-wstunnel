@@ -1,3 +1,0 @@
-*   Added logging mechanism;
-*   Avoid connection ID collisions;
-*   New code style used;

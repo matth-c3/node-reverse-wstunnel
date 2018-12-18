@@ -1,44 +1,36 @@
 {
-  "name": "node-reverse-wstunnel",
-  "version": "1.0.0",
+  "name": "reverse-ws-tunnel",
+  "version": "0.0.0",
   "description": "Tools to establish a TCP socket tunnel over websocket connection, and to enstabilish a reverse tunnel over websocket connection, for circumventing the problems of direct connections to the host behind a strict firewalls or without a public IP.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "dependencies": {
     "build-url": "^1.3.1",
+    "dayjs": "^1.7.8",
     "debug": "^4.1.0",
     "lodash": "^4.17.11",
-    "optimist": ">=0.6.1",
     "randomstring": "^1.1.5",
     "simple-encryptor": "^2.0.0",
     "websocket": ">=1.0.17"
   },
   "repository": {
     "type": "git",
-    "url": "github.com/alotronto/node-reverse-wstunnel"
+    "url": "github.com/michael34435/node-reverse-wstunnel"
   },
   "keywords": [
     "tunnel",
     "reverse",
     "WebSocket"
   ],
-  "author": "Andrea Rocco Lotronto <andrealotronto@gmail.com>",
+  "author": "Michael.K <michael34435@capslock.tw>",
   "license": [
     {
       "type": "Apache-2.0"
     }
   ],
-  "bugs": {
-    "url": "https://github.com/alotronto/wstunnel/issues"
-  },
-  "homepage": "https://github.com/alotronto/wstunnel",
+  "homepage": "github.com/michael34435/node-reverse-wstunnel",
   "devDependencies": {
     "eslint": "^5.10.0",
-    "eslint-config-airbnb": "^17.1.0",
     "eslint-config-standard": "^12.0.0",
-    "eslint-import-resolver-node": "^0.3.2",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
