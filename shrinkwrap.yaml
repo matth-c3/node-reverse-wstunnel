@@ -2,6 +2,7 @@ dependencies:
   build-url: 1.3.1
   dayjs: 1.7.8
   debug: 4.1.0
+  https-pem: 2.0.0
   is-port-reachable: 2.0.0
   lodash: 4.17.11
   lodash.random: 3.2.0
@@ -556,6 +557,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-7T/BxH19zbcCTa8XkMlbK5lTo1WtgkFi3GvdWEyNuc4Vex7/9Dqbnpsf4JMydcfj9HCg4zUWFTL3Za6lapg5/w==
+  /https-pem/2.0.0:
+    dependencies:
+      selfsigned: 1.10.4
+    dev: false
+    requiresBuild: true
+    resolution:
+      integrity: sha512-EeJkZ9hIi1l5aQBDSBzxgES7Z748mNOf3cbN48j/lzq4vZhinqNtM1kyaw0orPaxHfJTBvy/oZbJkhsxg1UHCg==
   /iconv-lite/0.4.24:
     dependencies:
       safer-buffer: 2.1.2
@@ -754,6 +762,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
+  /node-forge/0.7.5:
+    dev: false
+    resolution:
+      integrity: sha512-MmbQJ2MTESTjt3Gi/3yG1wGpIMhUfcIypUCGtTizFR9IiccFwxSpfp0vtIZlkFclEqERemxfnSdZEMR9VqqEFQ==
   /normalize-package-data/2.4.0:
     dependencies:
       hosted-git-info: 2.7.1
@@ -1019,6 +1031,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-JHEQ7yLM+JexOj8KvdtSeCOTzWo=
+  /selfsigned/1.10.4:
+    dependencies:
+      node-forge: 0.7.5
+    dev: false
+    resolution:
+      integrity: sha512-9AukTiDmHXGXWtWjembZ5NDmVvP2695EtpgbCsxCa68w3c88B+alqbmZ4O3hZ4VWGXeGWzEVdvqgAJD8DQPCDw==
   /semver/5.6.0:
     dev: true
     hasBin: true
@@ -1241,6 +1259,7 @@ specifiers:
   eslint-plugin-node: ^8.0.0
   eslint-plugin-promise: ^4.0.1
   eslint-plugin-standard: ^4.0.0
+  https-pem: ^2.0.0
   is-port-reachable: ^2.0.0
   lodash: ^4.17.11
   lodash.random: ^3.2.0
