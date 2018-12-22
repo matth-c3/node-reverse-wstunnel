@@ -21,7 +21,7 @@ const { ServerReverse } = require('reverse-websocket-tunnel');
 const server = new ServerReverse(secret);
 
 // start server at port 8000
-server.start(8000);
+server.start({ port: 8000 });
 ```
 
 ### Client Side
@@ -32,5 +32,5 @@ const { ClientReverse } = require('reverse-websocket-tunnel');
 const client = new ClientReverse(secret);
 
 // pipe port 3000 to remote server:8000 at port 8001
-client.start(3000, 8001, 'http://remote:8000');
+client.start({ port: 3000, tcpPort: 8001, address: 'http://remote:8000' });
 ```
