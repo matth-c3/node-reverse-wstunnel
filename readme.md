@@ -2,11 +2,11 @@ reverse-websocket-tunnel
 ---
 
 ## Overview
-`reverse-ws-tunnel` is modified version from `node-reverse-tunnel` and it only provides you reverse tunnel.
+`reverse-websocket-tunnel` is modified version from `node-reverse-tunnel` and it only provides you reverse tunnel.
 
 ## Installation
 ```bash
-yarn global add reverse-ws-tunnel
+yarn global add reverse-websocket-tunnel
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ yarn global add reverse-ws-tunnel
 // create randome secret with crypto module
 const crypto = require("crypto");
 const secret = crypto.randomBytes(8).toString('hex');
-const { ServerReverse } = require('reverse-ws-tunnel');
+const { ServerReverse } = require('reverse-websocket-tunnel');
 
 // create a new socket
 const server = new ServerReverse(secret);
@@ -26,7 +26,7 @@ server.start(8000);
 
 ### Client Side
 ```JavaScript
-const { ClientReverse } = require('reverse-ws-tunnel');
+const { ClientReverse } = require('reverse-websocket-tunnel');
 
 // create a new socket client, secret is obtain from server
 const client = new ClientReverse(secret);
