@@ -13,7 +13,7 @@
     "randomstring": "^1.1.5",
     "selfsigned": "^1.10.4",
     "simple-encryptor": "^2.0.0",
-    "websocket": "github:michael34435/WebSocket-Node#master"
+    "websocket": "^1.0.28"
   },
   "repository": {
     "type": "git",
