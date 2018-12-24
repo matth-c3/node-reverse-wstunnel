@@ -1,6 +1,6 @@
 {
   "name": "reverse-websocket-tunnel",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "Tools to establish a TCP socket tunnel over websocket connection, and to enstabilish a reverse tunnel over websocket connection, for circumventing the problems of direct connections to the host behind a strict firewalls or without a public IP.",
   "main": "index.js",
   "dependencies": {
