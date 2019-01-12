@@ -6,14 +6,14 @@ reverse-websocket-tunnel
 
 ## Installation
 ```bash
-yarn global add reverse-websocket-tunnel
+yarn add reverse-websocket-tunnel
 ```
 
 ## Usage
 ### Server Side
 ```JavaScript
 // create randome secret with crypto module
-const crypto = require("crypto");
+const crypto = require('crypto');
 const secret = crypto.randomBytes(8).toString('hex');
 const { ServerReverse } = require('reverse-websocket-tunnel');
 
