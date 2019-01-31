@@ -1,1 +1,1 @@
-module.exports = require('./lib/wst_wrapper');
+module.exports = require('./lib/wrapper');
