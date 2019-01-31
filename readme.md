@@ -31,6 +31,6 @@ const { ClientReverse } = require('reverse-websocket-tunnel');
 // create a new socket client, secret is obtain from server
 const client = new ClientReverse(secret);
 
-// pipe port 3000 to remote server:8000 at port 8001
-client.start({ port: 3000, tcpPort: 8001, address: 'http://remote:8000' });
+// pipe port 3000 to remote remote:8000 at port 8001, make sure you listen on wss
+client.start({ port: 3000, tcpPort: 8001, address: 'wss://remote:8000' });
 ```
