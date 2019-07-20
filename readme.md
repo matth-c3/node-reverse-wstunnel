@@ -14,9 +14,7 @@ yarn add reverse-websocket-tunnel
 ## Usage
 ### Server Side
 ```JavaScript
-// create randome secret with crypto module
-const crypto = require('crypto');
-const secret = crypto.randomBytes(8).toString('hex');
+let secret='' // Length must be larger than 15
 const { ServerReverse } = require('reverse-websocket-tunnel');
 
 // create a new socket
@@ -28,6 +26,7 @@ server.start({ port: 8000 });
 
 ### Client Side
 ```JavaScript
+let secret='' // Length must be larger than 15
 const { ClientReverse } = require('reverse-websocket-tunnel');
 
 // create a new socket client, secret is obtain from server
