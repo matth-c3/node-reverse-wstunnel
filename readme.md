@@ -1,5 +1,7 @@
 reverse-websocket-tunnel
 ---
+## Note
+By Yang Zhou: The parent project has some bugs which end up with "socket hang up" when the client try to connect. 
 
 ## Overview
 `reverse-websocket-tunnel` is modified version from `node-reverse-tunnel` and it only provides you reverse tunnel.
